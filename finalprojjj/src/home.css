@@ -1,0 +1,96 @@
+@keyframes backgroundAnimation {
+    0% {
+        background-color: #3E3232; /* Start with the initial background color */
+    }
+    25% {
+        background-color: #503C3C; /* Transition to another color */
+    }
+    50% {
+        background-color: #A87C7C; /* Transition to another color */
+    }
+    75% {
+        background-color: #7E6363; /* Transition to another color */
+    }
+    100% {
+        background-color: #3E3232; /* Return to the initial background color */
+    }
+  }
+  
+  .App {
+    text-align: center;
+  }
+  
+  .App-header {
+    background-color: #000000;
+    background-repeat: no-repeat;
+    background-size: 1600px 800px;
+    background-size: cover;
+    min-height: 665px;
+    display: flex;
+    flex-direction: column;
+    color: #594545;
+    text-shadow: 1px 1px 0 #9E7676, -1px -1px 0 #9E7676, 1px -1px 0 #9E7676, -1px 1px 0 #9E7676;
+    justify-content: center;
+    animation: backgroundAnimation 10s infinite; /* Apply the animation */
+  }
+  .CJ:hover {
+    transform: translateY(-50%);
+    transition: transform 0.5s ease; /* Smooth transition */
+  }
+  .CJstroke:hover {
+    transform: translateY(-50%);
+    transition: transform 0.5s ease; /* Smooth transition */
+  }
+  .CJstroke2:hover {
+    transform: translateY(-50%);
+    transition: transform 0.5s ease; /* Smooth transition */
+  }
+  .CJstroke3:hover {
+    transform: translateY(-50%);
+    transition: transform 0.5s ease; /* Smooth transition */
+  }
+  .CJstroke4:hover {
+    transform: translateY(-50%);
+    transition: transform 0.5s ease; /* Smooth transition */
+  }
+  .CJ {
+    font-weight: bold;
+    font-size: 100px;
+    margin-top: -10px;
+  }
+  
+  .CJstroke {
+    font-weight: bold;
+    font-size: 100px;
+    color: #886F6F;
+    text-shadow: 1px 1px 0 #3b3232, -1px -1px 0 #3b3232, 1px -1px 0 #3b3232, -1px 1px 0 #3b3232;
+    margin-bottom: -40px;
+  }
+  
+  .CJstroke2 {
+    font-weight: bold;
+    font-size: 100px;
+    color: #886F6F;
+    text-shadow: 1px 1px 0 #3b3232, -1px -1px 0 #3b3232, 1px -1px 0 #3b3232, -1px 1px 0 #3b3232;
+    margin-top: -150px;
+  }
+  
+  .CJstroke3 {
+    font-weight: bold;
+    font-size: 100px;
+    color: #867070;
+    text-shadow: 1px 1px 0 #3b3232, -1px -1px 0 #3b3232, 1px -1px 0 #3b3232, -1px 1px 0 #3b3232;
+    margin-bottom: -150px;
+    opacity: 0.5;
+  }
+  
+  .CJstroke4 {
+    font-weight: bold;
+    font-size: 100px;
+    color: #867070;
+    text-shadow: 1px 1px 0 #3b3232, -1px -1px 0 #3b3232, 1px -1px 0 #3b3232, -1px 1px 0 #3b3232;
+    margin-top: -150px;
+    opacity: 0.5;
+  }
+  
+  

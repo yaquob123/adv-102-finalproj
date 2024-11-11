@@ -1,0 +1,90 @@
+.destinations-container {
+  margin: 20px auto;
+  max-width: 1500px; /* Increased max-width for the container */
+
+  margin-left: 12rem;
+  margin-right: 12rem;
+  margin-top: 8px;
+  background-color: #454444; /* Background color */
+}
+
+
+.destination-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.destination-card {
+  width: 200px;
+  border: 1px solid #999; /* Monochrome border color */
+  background-color: #fff; /* Monochrome background color */
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add subtle box shadow */
+  transition: transform 0.3s, box-shadow 0.3s; /* Add transition effect */
+  position: relative; /* Add relative positioning */
+}
+
+.destination-card:hover {
+  transform: scale(1.05); /* Increase size slightly */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+}
+
+.destination-card img {
+  width: 100%;
+  height: auto;
+}
+
+.destination-info {
+  padding: 10px;
+}
+
+.destination-info h3 {
+  margin: 0;
+  font-size: 18px;
+  color: #333; /* Monochrome text color */
+}
+
+.destination-info p {
+  margin: 5px 0;
+  font-size: 14px;
+  color: #666; /* Monochrome text color */
+}
+
+/* Heart icon */
+.heart {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: #ffffff; /* Monochrome heart color */
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.heart:hover {
+  color: #d9534f; /* Monochrome hover color */
+}
+
+.heart.liked {
+  color: #d9534f; /* Monochrome liked color */
+}
+
+/* Book Now button */
+.book-now-btn {
+  display: block; /* Change to block to occupy full width */
+  margin-top: 10px; /* Add top margin */
+  width: 100%; /* Set width to 100% */
+  padding: 8px 16px;
+  background-color: #007bff; /* Monochrome button color */
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.book-now-btn:hover {
+  background-color: #0056b3; /* Monochrome hover color */
+}

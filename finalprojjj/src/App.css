@@ -1,0 +1,90 @@
+/* General styles for the entire application */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  background-color: #333;
+  padding: 10px 0;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0; /* Remove default margin */
+  display: flex; /* Use flexbox for layout */
+  justify-content: space-between; /* Align items with space between them */
+  align-items: center; /* Align items vertically */
+}
+
+nav ul .brand {
+  font-size: 3rem; /* Increase font size */
+  font-weight: bold; /* Add bold font weight */
+  color: #fff; /* Set brand color */
+  text-decoration: none; /* Remove underline */
+  display: flex; /* Use flexbox for layout */
+  flex-direction: column; /* Stack items vertically */
+  align-items: center; /* Align items horizontally */
+  margin-right: 10px; /* Adjust margin to align with the search bar */
+}
+
+nav ul .brand img {
+  width: 3.5rem; /* Adjust image width */
+  height: 3.5rem; /* Adjust image height */
+  margin-bottom: 1px; /* Add space below the logo */
+}
+
+nav ul .brand {
+  margin-left: 10px; /* Add space between brand name and search bar */
+  margin-right: auto; /* Push the brand name to the left */
+}
+
+nav ul li:not(:last-child) {
+  margin-right: 10px; /* Add space between navigation buttons */
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 15px; /* Add padding to make buttons clickable */
+  border-radius: 5px; /* Add rounded corners to buttons */
+  transition: background-color 0.3s; /* Smooth transition for background color */
+}
+
+nav ul li a:hover {
+  background-color: #555; /* Darken background color on hover */
+}
+
+/* Search bar styles */
+nav input[type="text"] {
+  padding: 8px; /* Adjust padding as needed */
+  border-radius: 5px;
+  border: none;
+  background-color: #555;
+  color: #fff;
+  transition: background-color 0.3s;
+  /* Adjust width and margin as needed */
+  width: 500px; /* Set the width of the search bar */
+  margin-left: 10px; /* Add space between brand name and search bar */
+}
+
+nav input[type="text"]:focus {
+  background-color: #777;
+  outline: none;
+}
+
+/* Logo image styles */
+nav .brand img {
+  width: 3.5rem; /* Adjust image width to match font size */
+  height: 3.5rem; /* Adjust image height to match font size */
+  margin-right: 5px; /* Add spacing between image and brand text */
+  margin-top: -3.5rem; /* Increase space above the logo */
+  flex-shrink: 0; /* Prevent the logo image from shrinking */
+  filter: brightness(0.8) invert(1) sepia(100%) saturate(1%) hue-rotate(0deg); /* Adjust filter properties */
+  border-radius: 50%; /* Make the image circular */
+  overflow: hidden; /* Ensure the image stays within the circular shape */
+  border: none; /* Remove border */
+}
+

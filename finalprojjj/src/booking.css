@@ -1,0 +1,117 @@
+/* booking.css */
+
+.booking-container {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #f9f9f9; /* Light gray background */
+    padding: 20px; /* Add padding for spacing */
+    border-radius: 8px; /* Add rounded corners */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add subtle box shadow */
+  }
+  
+  .booking-container h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .booking-container p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 20px;
+  }
+  
+  .booking-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    align-items: center; /* Align items vertically in rows */
+  }
+  
+  .booking-col {
+    flex: 1;
+    margin-right: 10px;
+  }
+  
+  .booking-col:last-child {
+    margin-right: 0;
+  }
+  
+  .booking-col label {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 8px;
+    display: block; /* Ensure labels are displayed as block elements */
+  }
+  
+  .booking-col input[type="text"],
+  .booking-col input[type="date"],
+  .booking-col input[type="email"],
+  .booking-col select,
+  .booking-col input[type="number"],
+  .booking-col input[type="time"] { /* Added styling for time input */
+    padding: 8px;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+  
+  .booking-row button {
+    padding: 12px 24px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .booking-row button:hover {
+    background-color: #898f96;
+  }
+  
+  .booking-row button + button {
+    background-color: #e40017;
+    margin-left: 10px;
+  }
+  .history {
+    margin-top: 30px;
+  }
+  .edit-button {
+    padding: 12px 24px;
+    background-color: green;
+    color: white;
+    border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;/* Add some margin between buttons */
+  }
+  
+  /* CSS for cancel button */
+  .cancel-button {
+    padding: 12px 24px;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 200px;
+  }
+ /* CSS for Hide booking/view all bookings button */
+.view-bookings-button {
+  padding: 12px 24px;
+  background-color: rgb(221, 90, 238); /* Change color to pink */
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* CSS for the same size and shape as Book Now button */
+.view-bookings-button:hover {
+  background-color: #918d8f; /* Lighter shade of pink on hover */
+}
+
+  

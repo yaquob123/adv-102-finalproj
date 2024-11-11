@@ -1,0 +1,69 @@
+/* features.css */
+
+/* Styles for the entire featured page */
+.featured-page {
+    max-width: 1000px; /* Set maximum width to prevent stretching on larger screens */
+    margin: 0 auto; /* Center the content horizontally */
+    padding: 20px; /* Add some padding for better spacing */
+    background-color: #f9f9f9; /* Add a light background color */
+    border-radius: 10px; /* Add rounded corners to the container */
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+}
+
+/* Styles for the heading */
+.featured-page h1 {
+    font-size: 36px;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px; /* Add some spacing below the heading */
+}
+
+/* Styles for the paragraph */
+.featured-page p {
+    font-size: 18px;
+    color: #666;
+    text-align: center;
+    margin-bottom: 30px; /* Add more spacing below the paragraph */
+}
+
+/* Styles for the list of reasons to choose us */
+.featured-page ul {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0;
+    margin-bottom: 30px; /* Add spacing below the list */
+}
+
+.featured-page li {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* Styles for the featured destinations section */
+.featured-page h2 {
+    font-size: 24px;
+    color: #333;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    text-align: center; /* Center align the heading */
+}
+
+/* Styles for the slider container */
+.featured-page .slick-slider {
+    margin-bottom: 30px;
+}
+
+/* Styles for individual slider items */
+.featured-page .slick-slide img {
+    width: 100%; /* Ensure the images fill the entire slider container */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Add rounded corners to the images */
+}
+
+/* Styles for the footer section */
+.featured-page footer {
+    text-align: center;
+    margin-top: 50px;
+    font-style: italic; /* Make the text italic */
+    color: #999; /* Dim the color of the footer text */
+}
