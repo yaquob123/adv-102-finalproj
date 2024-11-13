@@ -1,6 +1,4 @@
-// booking.js
-
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect,} from 'react';
 import { getDatabase, ref, push, set, update, remove, onValue } from "firebase/database";
 import './booking.css';
 
@@ -22,7 +20,7 @@ const Booking = () => {
   const [bookings, setBookings] = useState([]);
   const [showBookings, setShowBookings] = useState(false);
 
-  const countries = [
+  const countries = React.useMemo(() => [
     { name: 'PARIS', price: 100 },
     { name: 'NEW YORK', price: 150 },
     { name: 'SINGAPORE', price: 200 },
@@ -33,12 +31,8 @@ const Booking = () => {
     { name: 'DUBAI', price: 160 },
     { name: 'SPAIN', price: 190 },
     { name: 'BRAZIL', price: 250 }
-  ];
-
-
-
-
-  const calculateTotalPrice = () => {
+  ], []);
+  const calculateTotalPrice = React.useCallback(() => {
     if (numberOfTravelers && selectedCountry) {
       const country = countries.find(country => country.name === selectedCountry);
       if (country) {
@@ -46,10 +40,13 @@ const Booking = () => {
         setTotalPrice(totalPriceCalculation);
       }
     }
-  };
+  }, [numberOfTravelers, selectedCountry, countries]);
+  
+  
+
   useEffect(() => {
     calculateTotalPrice();
-  }, [numberOfTravelers, selectedCountry]);
+  }, [calculateTotalPrice]);
 
   useEffect(() => {
     onValue(bookingsRef, (snapshot) => {
@@ -59,11 +56,13 @@ const Booking = () => {
       }
     });
   }, [bookingsRef]);
+
   useEffect(() => {
     if (showBookings) {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
   }, [showBookings]);
+
   const handleSubmit = (e) => {
     e.preventDefault();
     const bookingData = {
@@ -78,7 +77,7 @@ const Booking = () => {
       returnDate,
       totalPrice
     };
-    
+
     if (isSubmitted) {
       const bookingRef = ref(db, `bookings/${bookingInfo.id}`);
       update(bookingRef, bookingData);
@@ -102,6 +101,7 @@ const Booking = () => {
     setReturnDate('');
     setTotalPrice(0);
   };
+
   const handleEditBooking = (booking) => {
     setName(booking.name);
     setContactNumber(booking.contactNumber);
@@ -115,8 +115,9 @@ const Booking = () => {
     setTotalPrice(booking.totalPrice);
     setIsSubmitted(true);
     setBookingInfo(booking);
-    window.scrollTo({ top: 0, behavior: 'smooth' }); // Scroll to top
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
+
   const handleCancelBooking = (booking) => {
     const bookingRef = ref(db, `bookings/${booking.id}`);
     remove(bookingRef).then(() => {
@@ -125,9 +126,11 @@ const Booking = () => {
       console.error('Error removing booking: ', error);
     });
   };
+
   const toggleBookingView = () => {
     setShowBookings(!showBookings);
   };
+
   return (
     <div className="booking-container">
       <h2>Booking</h2>
